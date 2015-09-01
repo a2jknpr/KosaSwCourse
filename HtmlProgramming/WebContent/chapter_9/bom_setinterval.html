@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			//setInterval(function(){ alert("Hello"); }, 3000);
+			//함수가 주기적으로 실행함. 3초마다(밀리세컨으로 표시)
+			//http://www.w3schools.com/jsref/met_win_setinterval.asp
+		
+			var id = setInterval(function(){ alert("Hello"); }, 3000);
+			//id정보를 가지고 있음
+			function stop(){
+				clearInterval(id);
+			}
+		</script>
+	</head>
+	
+	<body>
+		<button onclick = "stop()">경고창 멈춤</button>
+	</body>
+</html>

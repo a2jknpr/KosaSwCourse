@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script>
+		window.onload = function(){
+			//function : 이벤트 핸들러(처리자) : 이벤트가 발생했을 때 처리하는 함수
+
+			//문서 객체를 추가합니다.
+			var output = "";
+			for (var i = 0; i< 256; i++){ /* for문 256번 실행 */
+				output +='<div></div>'; /* 블럭요소로서 인식됨 */
+			}
+			document.body.innerHTML = output;  /* ??????????? */
+			
+			//문서 객체를 선택합니다.
+			var divs = document.querySelectorAll('div');
+			for(var i = 0; i<divs.length; i++){
+				//변수를 	선언합니다.
+				var div = divs[i];
+				
+				//스타일을 적용합니다.
+				div.style.height = '2px';
+				div.style.background = 'rgb('+i + ','+i + ','+ i + ')'; /* i값에 따라서 변화..?! i가 모두 0이면..(0,0,0) */
+			}
+		};
+		</script>
+	</head>
+	
+	<body>
+	<!-- 	<div></div>
+			<div></div>
+		... 256개만큼 -->
+	</body>
+</html>
+
+<!-- 실제로 이렇게 하려면 그냥 그래디언트 적용함 -->

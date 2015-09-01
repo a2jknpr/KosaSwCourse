@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Event</title>
+		<script type="text/javascript" src = "jquery-1.11.3.min.js"></script>
+		<script>
+			//이벤트를 연결합니다.
+			$(function(){
+				//input_1
+				$('#input_1').on("keydown", function() {
+					// 글자 개수가 여섯 개 이상일 경우 	
+					if(6<= $('#input_1').val().length) {
+						 // input_2 문서 객체로 초점을 이동합니다.
+						$('#input_2').focus();
+					} 
+				});
+				
+				$('#input_2').on("keydown", function(event) {
+					if(event.keyCode == 8 && $("input_2").val().length == 0){
+						$("#input_1").focus();
+					}
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+		<input id ="input_1" type="text" maxlength="6"/>
+		<span>-</span>
+		<input id ="input_2" type="text" maxlength="7"/>
+	</body>
+</html>

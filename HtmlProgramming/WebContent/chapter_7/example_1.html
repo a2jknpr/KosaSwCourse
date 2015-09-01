@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type ="text/css"> 
+			#container >.item{
+				margin : 0px 3px;
+				padding: 10px; /* 위아래 전부다 10픽셀 */
+				border: 1px solid black;
+				
+				/* display : inline-block; */
+				flaot: left;
+			}
+				/* 	
+					div >.item 자식		
+					div .item 후손
+					div.item  :div태그에 item 클래스가 지정된 것
+				 */
+				
+			
+			#footer{
+			clear: both;
+			}
+			
+		/* div태그에 아이템 클래스가 있는 것 */
+		</style>
+	</head>
+	
+	<body>
+		<p id = "header">제목</p>
+		<div id = "container">
+			<div class = "item">메뉴-1</div>
+			<div class = "item">메뉴-2</div>
+			<div class = "item">메뉴-3</div>
+			<div class = "item">메뉴-4</div>
+		</div>
+		<p id = "footer">주소</p>
+		
+	</body>
+</html>

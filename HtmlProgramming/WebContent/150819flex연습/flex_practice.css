@@ -1,0 +1,41 @@
+*{
+	margin: 0px;
+	padding: 0px; 
+}
+
+.fullscreen{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	text-align: center; 
+}
+
+.top{
+	height: 40px;  
+	background-color: darkgray;
+}
+
+.middle{
+	display: flex;
+	flex: 1;
+}
+
+.left{
+	width: 50px;
+	background-color: gray;
+}
+
+.center{
+	flex: 1;
+	background-color: white;
+}
+
+.right{
+	width: 50px;
+	background-color: gray;
+}
+
+.bottom{
+	height: 40px;  
+	background-color: darkgray;
+}

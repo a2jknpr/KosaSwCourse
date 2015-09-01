@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Insert title here</title>
+      <style type="text/css">
+         #out{
+            display: none;
+            
+         }
+         
+         
+      </style>
+      
+      <script src="jquery-1.11.3.min.js"></script>
+      <script type="text/javascript">
+         var imgNo = 1;
+         $(function(){
+             setInterval(function(){
+                $.ajax({
+                   url:"ajax06.jsp",
+                   success: function(data){
+                     $("#ad").html(data);
+                   }
+                   
+                });
+             }, 3000);
+         });
+      
+      </script>
+   </head>
+   
+   <body>
+      
+      <div id="ad" style="width:200px; height:200px; border: 1px solid black">
+         
+      </div>
+      <hr/>
+      주요 내용.....3초단위 광고판 만들기
+      
+   </body>
+</html>

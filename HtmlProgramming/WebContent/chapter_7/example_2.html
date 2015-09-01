@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;   /* 모든 요소와 마진을 초기화시키려고 -> 브라우저마다 기본 값들이 다르므로 */
+			}
+		
+			body {
+				min-width: 50vw; 
+				margin: 0px auto;
+				background-color: #e6e6e6;
+				}
+		
+			#page-wrapper{
+				min-width: 500px; 
+				height: 100vh;  /* 뷰포트의 높이만큼 */
+				display: flex;
+				flex-direction: colunm;			
+				/* 	background-color: white; */
+			
+				/* pading: 10px 0px;   */
+				}
+				
+			#main {
+				flex:1; /* 부모의 높이를 꽉차게 만듦?? */
+				margin: 20px;
+				background-color: white; 	
+				/* height: 100%; */	
+				}
+		</style>
+	</head>
+	
+	<body>
+			<div id ="page-wrapper">
+				<div id= "main">
+				</div>
+			<!-- 항상 가운데 위치하도록 하고싶어서 div id =main을 하나 더 만들었다..? -->
+			</div>
+	</body>
+</html>

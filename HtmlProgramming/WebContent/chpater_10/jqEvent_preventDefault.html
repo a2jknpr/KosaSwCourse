@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src = "jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				var link1 = document.querySelector("#link1");
+				link1.onclick= function(event) {
+					event = event || window.event;
+					console.log(event);
+					return false;
+				}
+				//jquery안쓰고 순수한 dom의 event, 브라우저에 따라 event객체에 안들어올 수도 있음
+				
+				$("#link2").click(function(event) {
+					//how1
+					console.log(event);
+					//return false;
+					//제이쿼리객체 얻어서 이벤트 처리 (여기서의 event는 jquery가 포장한 객체)
+					
+					//how2
+					event.preventDefault();
+				});  
+			});
+		
+			
+			// 아래랑 똑같음 $("#link1").click(function(){});  = $("#link1").on("click",function(){} )
+			//위의 function(event)의 두가지 event는 다른객체임 (dom이냐 /jquery로 감쌌냐(wrapping))			
+			
+		</script>
+	</head>
+	
+	<body>
+		<a id="link1" href="http://www.naver.com">네이버</a>
+		<br/>
+		<a id="link2" href="http://www.naver.com">네이버</a>
+		
+	</body>
+</html>

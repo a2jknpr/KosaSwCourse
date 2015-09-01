@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+		
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			.box{
+				width: 100px;
+				height: 100px;
+				position: absolute; 	/*절대위치를 의미, 정상적인 블록요소의 위치가 없어진다고 보면 됨 */
+			}
+			.box:nth-child(1) {
+				background-color: red;
+				top: 30px;
+				left: 10px;
+				z-index: 1;
+				}
+			.box:nth-child(2) {
+				background-color: blue;
+				top: 500px;
+				left: 30px;
+				z-index: 2;
+				}
+			.box:nth-child(3) {
+				background-color: green;
+				top: 90px;
+				left: 60px;
+				z-index: 3;	
+				}
+				
+			body > div {
+				position: relaive;
+				height: 200px;
+				border: 1px solid black;
+				
+				}
+		</style>
+	</head>
+
+	<body>
+		<h1> ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</h1> <!-- 블록요소 -->
+		<div>
+			<div class = "box"></div>
+			<div class = "box"></div>
+			<div class = "box"></div>
+		</div>
+		<h1> ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</h1>
+	</body>
+</html>

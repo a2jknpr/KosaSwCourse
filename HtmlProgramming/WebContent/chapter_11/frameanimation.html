@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src = "jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var id;
+				var frames = [];
+				for(var i = 0; i<=14; i++){
+					frames[i] = i + ".png";
+				}
+				var count = 0;
+				
+				$("#btnStart").click(function() {
+					id = setInterval(function(){
+						$("#image").attr(
+								"src",
+								frames[count%frames.length] 
+								// 0(1,2,3,...,14,15,16,...)을 15로 나누면? 나머지이므로 어떤 수로 나눠도 0에서 14로 나옴
+								);
+						count++;
+					},1000/20); //1초에 20번이 실행!! (보통 1초당 23개가 실행되면 움직이는 것처럼 보임)
+				});
+					
+				$("#btnEnd").click(function(){
+					clearInterval(id);
+				});
+			});
+		</script>
+	
+	</head>
+	
+	<body>
+		<button id="btnStart">Start</button>
+		<button id="btnEnd">End</button>
+		<hr/>
+		<img id="image"/>
+	</body>
+</html>

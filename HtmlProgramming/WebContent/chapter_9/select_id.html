@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			//스크립트는 그냥 실행임 
+			
+			//이벤트를 연결합니다. 
+			//위에서 아래방향으로 해석한다..없으면 객체가 만들어지지 않아 아무것도 가져오지 않는다. null이 됨 
+			//에러 : null에서 스타일 속성을 읽을 수 없다
+			window.onload = function() { /* 속성이름에 on이 들어가면 event가 발생했을 때 자동적으로 실행되는 함수 : 콜백함수*/
+				//여기서는 load 이벤트가 발생했을때 실행되는 시점 :첨부터 끝까지 객체가 만들어진 다음에 마지막으로 함수가 실행됨 
+				
+				//문서 객체를 선택합니다.			
+				/* var header = document.getElementById('header'); */
+				var header = document.querySelector('#header'); 
+				
+				//문서 객체를 조작합니다.
+				header.style.color = "orange"; /* 글자색상 */
+				header.style.background = "red"; /* 배경색 */
+				header.innerHTML = "From JavaScript"; /* body의 Header의 글자색 */
+			};
+		</script>
+	</head>
+	
+	<body>
+		<h1 id = "header">Header</h1>	
+	</body>
+</html>

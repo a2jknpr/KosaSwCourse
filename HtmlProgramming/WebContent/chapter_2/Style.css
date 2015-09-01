@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>External Stylesheet Basic</title>
+    <link rel="stylesheet" href="Style.css" />
+    
+    
+    <!-- 	<style>
+		h1 {
+			color : white;
+			background : blcak;
+		}
+	</style> -->
+    
+    
+</head>
+<body>
+    <h1>Hello CSS .. !</h1>
+</body>
+</html>

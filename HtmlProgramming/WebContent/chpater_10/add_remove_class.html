@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src = "jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+			$(function(){		});
+			
+			function addClass(){
+				$("#box").addClass("circle"); 
+			}
+			function removeClass() {
+				$("#box").removeClass("circle"); 
+			}
+			
+		</script>
+		
+		<style type="text/css">
+			#box{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+			}
+			
+			.circle{
+				border-radius: 50px; 
+			}
+		</style>
+	
+	</head>
+	
+	<body>
+		<div id="box" ></div>
+		<button onclick="addClass()">클래스추가</button>
+		<button onclick="removeClass()">클래스제거</button>
+	</body>
+</html>
+
+
+
+		<!-- 	$(function(){
+					$("#box").addClass("circle"); 
+				});
+					-> 자바스크립트에서 동적으로 추가
+			아래 body부분에 <div id="box" class="circle"></div>이렇게만 넣는거랑 같음 
+			
+			
+			미리 CSS를 작성해 놓고, 적용이나 제거를 함-->
+
+
+
+

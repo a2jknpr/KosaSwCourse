@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src = "jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+			$(function (){
+			
+				/* var joinForm = document.joinForm;
+				joinFrom.onsubmit = function(){
+					var userName = document.joinForm.userName;
+					
+					if(userName.value == ""){
+						alert("입력을 하세요!");
+						return false;
+					}
+				}; */
+				
+				//jQuery적인 방법 : 
+			    $("#joinForm").submit(function(event) {
+		               var value = $("#userName").val()
+		               if(value == "") {
+		                  alert("입력을 하세요!");
+		                  //return false;
+		                  event.preventDefault();
+		               }else if(value.replace(/[가-힣]/g, '').length!=0){
+		                  //한글만나면 빈문자 넣어
+		                  alert("한글만 입력하세요!!");
+		                  return false;
+		               }
+		            });
+		         });
+			//val의 값을 읽어라. 그 값이 없다면 alert를 실행하라.
+			//한글을 만나면 빈문자로 바꿔라(한글을 지운다는 의미) 남는 것은 알파벳, 숫자, 특수기호
+			//문자열의 길이가 0이면..(전부 한글이라면 0이나옴) -> 한글만 입력하라!!
+			
+			
+		</script>
+	</head>
+	
+	<body>
+		<form id="joinForm" name="joinForm">
+			<label>이름</label>
+			<input id="userName" name="userName" type="text" value=""/>
+			<input type="submit"/>
+		</form>
+	</body>
+</html>
+
+<!-- p 375 -->
+<!-- 비어있으면 안된다/한글을 넣어야지 영어를 넣으면 안된다. -->
+<!-- jquery는 name사용 잘 안하고 id나  -->
